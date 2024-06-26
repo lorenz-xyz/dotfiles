@@ -69,7 +69,7 @@ for_window [title="- IntelliJ IDEA"] border pixel 0
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty 
+bindsym $mod+Return exec kitty -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
