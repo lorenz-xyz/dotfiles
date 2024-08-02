@@ -178,6 +178,7 @@ bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst && dunstify -
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+$alt+l exec bash ~/.config/i3/lockscreen.sh
 bindsym $mod+$alt+k exec "bash ~/.config/i3/lockscreen.sh && systemctl suspend"
+bindsym $mod+$alt+n exec networkmanager_dmenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
