@@ -83,7 +83,7 @@ export MANPATH="/usr/local/man:$MANPATH"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-export PATH=$PATH:"$GOPATH/bin:$HOME/scripts:$HOME/bin:/usr/local/lib/sts/cmd"
+export PATH=$PATH:"$GOPATH/bin:$HOME/scripts:$HOME/bin:/usr/local/lib/sts/cmd:/usr/local/bin"
 export GOPATH=$HOME/go
 
 export XDG_CONFIG_HOME="$HOME/.config"
