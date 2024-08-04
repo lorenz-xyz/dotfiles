@@ -178,7 +178,7 @@ bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst && dunstify -
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+$alt+l exec bash ~/.config/i3/lockscreen.sh
 bindsym $mod+$alt+k exec "bash ~/.config/i3/lockscreen.sh && systemctl suspend"
-bindsym $mod+$alt+n exec networkmanager_dmenu
+bindsym $mod+$alt+n exec sudo networkmanager_dmenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -213,7 +213,7 @@ exec_always "bash $HOME/.config/polybar/launch.sh"
 
 #colors:                border  backgr. text    indicator
 client.focused          #C90E6F #C90E6F #ffffff #C90E6F
-client.focused_inactive #4D4D4D #2b2b2b #ffffff #C90E6F
+client.focused_inactive #4D4D4D #2b2b2b #ffffff #2b2b2b
 client.unfocused        #4D4D4D #2b2b2b #ffffff #C90E6F
 client.urgent           #900000 #900000 #ffffff #C90E6F
 
