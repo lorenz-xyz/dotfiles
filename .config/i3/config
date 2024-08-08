@@ -70,8 +70,11 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -modi drun,run -show drun"  
+bindsym $mod+Shift+d exec "rofi -modi drun,run -show drun -run-command 'lxsudo {cmd}' -config /home/lorenz/.config/rofi/admin-config.rasi"  
 bindsym $mod+m exec "rofimoji -a type"
 bindsym $mod+t exec "rofi -show calc -modi calc -no-show-match -no-sort"
+
+bindsym $mod+q exec "pcmanfm"
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -178,7 +181,7 @@ bindsym $mod+Shift+d --release exec --no-startup-id "killall dunst && dunstify -
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+$alt+l exec bash ~/.config/i3/lockscreen.sh
 bindsym $mod+$alt+k exec "bash ~/.config/i3/lockscreen.sh && systemctl suspend"
-bindsym $mod+$alt+n exec sudo networkmanager_dmenu
+bindsym $mod+$alt+n exec lxsudo networkmanager_dmenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
