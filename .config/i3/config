@@ -227,7 +227,7 @@ exec_always picom --experimental-backends -b
 exec_always copyq
 exec_always --no-startup-id dunst
 bindsym $mod+v exec copyq toggle
-bindsym $mod+c exec "flatpak run com.github.rajsolai.textsnatcher"
+bindsym $mod+c exec com.github.rajsolai.textsnatcher
 
 gaps inner 15
 gaps outer 5

@@ -1,0 +1,9 @@
+profile {
+	output eDP-1 disable
+	output DP-5 mode 1920x1080 position 0,0
+	output DP-7 mode 1920x1080 position 1920,0
+}
+
+profile {
+	output eDP-1 mode 1280x720 position 0,0
+}
