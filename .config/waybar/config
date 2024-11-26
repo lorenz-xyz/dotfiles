@@ -1,14 +1,14 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 24,
+    "height": 28,
     "spacing": 4,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/submap",
     ],
     "modules-center": [
-        "sway/window"
+        "hyprland/window"
     ],
     "modules-right": [
         "pulseaudio",
@@ -17,7 +17,7 @@
         "battery",
         "clock",
         "tray",
-        "custom/power"
+				"custom/power",
     ],
     "hyprland/workspaces": {
         "all-outputs": false,
@@ -25,6 +25,28 @@
      },
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+		"cava": {
+        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 1,
+        "sensitivity": 100,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -49,7 +71,6 @@
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""]
     },
-    },
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
         "format-muted": "󰝟 {format_source}",
@@ -64,15 +85,15 @@
         "on-click": "pavucontrol"
     },
     "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+			"format" : "⏻ ",
+			"tooltip": false,
+			"menu": "on-click",
+			"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+			"menu-actions": {
+				"shutdown": "systemctl poweroff",
+				"reboot": "reboot",
+				"suspend": "hyprlock & systemctl suspend",
+				"hibernate": "hyprlock & systemctl hibernate"
+			}
     }
 }
