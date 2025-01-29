@@ -8,13 +8,14 @@
         "hyprland/submap",
     ],
     "modules-center": [
-        "hyprland/window"
     ],
     "modules-right": [
+				"custom/homeassistant",
         "pulseaudio",
         "cpu",
         "memory",
         "battery",
+				"network",
         "clock",
         "tray",
 				"custom/power",
@@ -71,6 +72,18 @@
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""]
     },
+		"network": {
+				"interface": "wlp0s20f3",
+				"format": "{essid} ({signalStrength}%)  ",
+				"format-wifi": "{essid} ({signalStrength}%) ",
+				"format-ethernet": "{ipaddr}/{cidr} 󰊗",
+				"format-disconnected": "", //An empty format will hide the module.
+				"tooltip-format": "{ifname} via {gwaddr} 󰊗",
+				"tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+				"tooltip-format-ethernet": "{ifname} ",
+				"tooltip-format-disconnected": "Disconnected",
+				"max-length": 50
+		},
     "pulseaudio": {
         "format": "{volume}% {icon} {format_source}",
         "format-muted": "󰝟 {format_source}",
@@ -94,6 +107,17 @@
 				"reboot": "reboot",
 				"suspend": "hyprlock & systemctl suspend",
 				"hibernate": "hyprlock & systemctl hibernate"
+			}
+    },
+
+    "custom/homeassistant": {
+			"format" : "󰟐 ",
+			"tooltip": false,
+			"menu": "on-click",
+			"menu-file": "$HOME/.config/waybar/ha_menu.xml", 
+			"menu-actions": {
+				"mood-relax": "/home/lorenz/go/bin/home-assistant -m relax",
+				"mood-off": "/home/lorenz/go/bin/home-assistant -m off",
 			}
     }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+
+    <child>
+      <object class="GtkMenuItem">
+
+	<property name="label">Mood</property>
+	<child type="submenu">
+	  <object class="GtkMenu">
+
+	    <child>
+	      <object class="GtkMenuItem" id="mood-relax">
+		<property name="label">Relax</property>
+	      </object>
+	    </child>
+
+	    <child>
+	      <object class="GtkMenuItem" id="mood-off">
+		<property name="label">Off</property>
+	      </object>
+	    </child>
+
+	  </object>
+	</child>
+
+      </object>
+    </child>
+
+  </object>
+</interface>

@@ -102,6 +102,8 @@ button:hover {
 #wireplumber,
 #custom-media,
 #custom-power,
+#custom-homeassistant,
+#network,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -146,7 +148,12 @@ button:hover {
     }
 }
 
-#custom-power {
+#custom-homeassistant {
+    font-size: 17px;
+}
+
+#custom-power,
+#custom-homeassistant {
     padding: 0px 8px 0px 12px;
 }
 
