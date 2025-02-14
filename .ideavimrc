@@ -1,0 +1,122 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+let mapleader = " "
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+set ic
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+"Switching tabs"
+map <c-l> <Action>(NextTab)
+map <c-h> <Action>(PreviousTab)
+
+"go to Implementation"
+map gi <Action>(GotoImplementation)
+"go to overwrite"
+map go <Action>(GotoSuperMethod)
+
+"toggle description"
+map td <Action>(ToggleRenderedDocPresentation)
+
+"Highlight in tree"
+map <Leader>h <Action>(SelectInProjectView)
+
+"Set BreakPoint"
+map <Leader>sb <Action>(ToggleLineBreakpoint)
+"Mute BreakPoint"
+map <Leader>mb <Action>(XDebugger.MuteBreakpoints)
+
+"Resume"
+map <Leader>dr <Action>(Resume)
+"Step Over (debugger next)"
+map <Leader>n <Action>(StepOver)
+
+"Optimize Imports"
+map <Leader>oi <Action>(OptimizeImports)
+
+"Set Marker"
+map <Leader>sm <Action>(ToggleBookmark)
+map <Leader>sM <Action>(ToggleBookmarkWithMnemonic)
+"Display Markers"
+map <Leader>mm <Action>(ShowBookmarks)
+
+"Reformat"
+map <Leader>f <Action>(ReformatCode)
+
+"commands"
+map <c-s-R> <Action>(Run)
+map <c-e> <Action>(Debug)
+
+"errors"
+map <c-C> <Action>(GotoNextError)
+
+"Tree Up"
+map <c-n> <Action>(Tree-selectNext)
+"Tree Up"
+map <c-p> <Action>(Tree-selectPrevious)
+
+"copy to pc directory"
+map <Leader>y "\"+y"
+xnoremap <Leader>y "\"+y"
+
+map <Leader>w <Action>(HideAllWindows)
+
+map <Leader>x "\"_x"
+xnoremap <Leader>x "\"_x"
+
+xnoremap J ":m '>+1<CR>gv=gv"
+xnoremap K ":m '<-2<CR>gv=gv"
+
+map <Leader>d <Action>(ActivateDebugToolWindow)
+
+map <Leader>pr <Action>(CompileProject)
+map <Leader>pm <Action>(Maven.Reimport)
+
+map <Leader>cl <Action>(CommentByLineComment)
+map <Leader>cb <Action>(CommentByBlockComment)
+
+map <Leader>fc <Action>(FileStructurePopup)
+map <Leader>ea <Action>(EvaluateExpression)
+map <Leader>s <Action>(Switcher)
+
+
+set nu
+set relativenumber
+set scrolloff = 8
+
+"which-key plugin"
+set which-key
+set timeoutlen=5000
+
+"Reload Configs"
+command! Reload action IdeaVim.ReloadVimRc.reload
+command! Check action InspectCode
