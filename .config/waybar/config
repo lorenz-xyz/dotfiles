@@ -118,7 +118,11 @@
 			"menu-file": "$HOME/.config/waybar/ha_menu.xml", 
 			"menu-actions": {
 				"mood-relax": "/home/lorenz/go/bin/home-assistant -m relax",
+				"mood-bedtime": "/home/lorenz/go/bin/home-assistant -m bedtime",
 				"mood-off": "/home/lorenz/go/bin/home-assistant -m off",
+				"mood-timebased": "/home/lorenz/go/bin/home-assistant -m timebased",
+				"mood-energy": "/home/lorenz/go/bin/home-assistant -m energy",
+				"mood-focus": "/home/lorenz/go/bin/home-assistant -m focus",
 			}
     }
 }

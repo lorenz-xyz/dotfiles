@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <object class="GtkMenu" id="menu">
+	<child>
+	  <object class="GtkMenuItem" id="mood-timebased">
+	    <property name="label">On</property>
+	  </object>
+	</child>
+
+	<child>
+	  <object class="GtkMenuItem" id="mood-off">
+	    <property name="label">Off</property>
+	  </object>
+	</child>
 
 	<child>
 	  <object class="GtkMenuItem" id="mood-relax">
@@ -9,8 +20,20 @@
 	</child>
 
 	<child>
-	  <object class="GtkMenuItem" id="mood-off">
-	    <property name="label">Off</property>
+	  <object class="GtkMenuItem" id="mood-bedtime">
+	    <property name="label">Bedtime</property>
+	  </object>
+	</child>
+
+	<child>
+	  <object class="GtkMenuItem" id="mood-focus">
+	    <property name="label">Focus</property>
+	  </object>
+	</child>
+
+	<child>
+	  <object class="GtkMenuItem" id="mood-energy">
+	    <property name="label">Energy</property>
 	  </object>
 	</child>
 
