@@ -7,3 +7,8 @@ profile home {
 profile laptop {
 	output eDP-1 mode 1920x1080 position 0,0 scale 1
 }
+
+profile kth {
+	output eDP-1 mode 1920x1080 position 0,1080 scale 1
+	output DP-3 mode 1920x1080 position 0,0
+}

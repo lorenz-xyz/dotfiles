@@ -23,6 +23,7 @@
     "hyprland/workspaces": {
         "all-outputs": false,
         "format": "{name}",
+				"ignore-workspaces": ["99"],
      },
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
@@ -86,7 +87,7 @@
 				"max-length": 50
 		},
     "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}   {format_source}",
         "format-muted": "󰝟 {format_source}",
         "format-bluetooth": "{volume}% {icon}  {format_source}",
         "format-bluetooth-muted": "󰝟 {icon}  {format_source}",
@@ -96,7 +97,10 @@
             "headphone": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+				"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+				"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%"
     },
     "custom/power": {
 			"format" : "⏻ ",
@@ -124,5 +128,6 @@
 				"mood-energy": "/home/lorenz/go/bin/home-assistant -m energy",
 				"mood-focus": "/home/lorenz/go/bin/home-assistant -m focus",
 			}
-    }
+    },
+
 }
