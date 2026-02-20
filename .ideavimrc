@@ -63,11 +63,6 @@ map <Leader>n <Action>(StepOver)
 "Optimize Imports"
 map <Leader>oi <Action>(OptimizeImports)
 
-"Set Marker"
-map <Leader>sm <Action>(ToggleBookmark)
-map <Leader>sM <Action>(ToggleBookmarkWithMnemonic)
-"Display Markers"
-map <Leader>mm <Action>(ShowBookmarks)
 
 "Reformat"
 map <Leader>f <Action>(ReformatCode)
@@ -108,6 +103,29 @@ map <Leader>fc <Action>(FileStructurePopup)
 map <Leader>ea <Action>(EvaluateExpression)
 map <Leader>s <Action>(Switcher)
 
+map <Leader>fss <Action>(me.laria.code.idea_caseconv.ScreamingSnakeCaseAction)
+
+"customize tag"
+map <Leader>ct <Action>(SurroundWithLiveTemplate)
+map <Leader>cui <Action>(CopyUniqueIdentifier)
+
+
+map <Leader>th <Action>(TypeHierarchy)
+map <Leader>mh <Action>(MethodHierarchy)
+map <Leader>ch <Action>(CallHierarchy)
+
+
+"Hot Reload File"
+map <Leader>cf <Action>(CompileFile)
+
+"Set Marker"
+map <Leader>sm <Action>(ToggleBookmark)
+map <Leader>sM <Action>(ToggleBookmarkWithMnemonic)
+"Display Markers"
+map <Leader>mm <Action>(ShowBookmarks)
+
+"update Convenience Methode"
+map <Leader>um <Action>(org.eclipse.scout.sdk.s2i.UpdateDoConvenienceMethodsInFileMenu)
 
 set nu
 set relativenumber
